@@ -1,6 +1,7 @@
 # Have I Been Pwned CLI - Deno
 
 [![](https://github.com/BrunoBernardino/haveibeenpwned-cli-deno/workflows/Run%20Tests/badge.svg)](https://github.com/BrunoBernardino/haveibeenpwned-cli-deno/actions?workflow=Run+Tests)
+[![](https://shield.deno.dev/x/haveibeenpwned)](https://deno.land/x/haveibeenpwned)
 
 This is a small and simple CLI script to check against
 ["Have I Been Pwned" (HIBP)](https://haveibeenpwned.com) if a given password has
@@ -24,16 +25,16 @@ There are no other dependencies. **Deno**!
 
 ```sh
 # interactive (password asked via prompt, so it's not logged in the shell history):
-$ deno run --allow-net --unstable https://github.com/BrunoBernardino/haveibeenpwned-cli-deno/tree/main/main.ts
+$ deno run --allow-net --unstable https://deno.land/x/haveibeenpwned@1.0.1/main.ts
 
 # non-interactive:
-$ deno run --allow-net --unstable https://github.com/BrunoBernardino/haveibeenpwned-cli-deno/tree/main/main.ts --password=1234
+$ deno run --allow-net --unstable https://deno.land/x/haveibeenpwned@1.0.1/main.ts --password=1234
 ```
 
 ## Usage (install)
 
 ```sh
-$ deno install --allow-net --unstable https://github.com/BrunoBernardino/haveibeenpwned-cli-deno/tree/main/main.ts --name haveibeenpwned
+$ deno install --allow-net --unstable https://deno.land/x/haveibeenpwned@1.0.1/main.ts --name haveibeenpwned
 
 # interactive
 $ haveibeenpwned
@@ -60,4 +61,7 @@ $ make test
 
 ## Deployment
 
-Simply create a new tag in GitHub.
+```sh
+$ git tag -s 1.0.x
+$ git push origin --tags
+```
